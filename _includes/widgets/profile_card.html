@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col">
                         <a class="pr-3" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
+                            <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email }}</span>
                         </a>
 
                         {% if site.data.profile.gscholar %}
@@ -81,6 +81,13 @@
                             <i class="fab fa-twitter"></i> Twitter
                         </a>
                         {% endif %}
+
+                        {% if site.data.profile.bilibili %}   <!-- 假设数据字段改为 bilibili -->
+                        <a class="px-1 no-break" target="_blank" href="https://space.bilibili.com/{{ site.data.profile.bilibili }}">
+                            <i class="fab fa-bilibili"></i>  Bilibili <!-- 图标类改为 fa-bilibili -->
+                        </a>
+                        {% endif %}
+
 
                         {% if site.data.profile.linkedin %}
                         <a class="pr-3 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">

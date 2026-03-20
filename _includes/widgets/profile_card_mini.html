@@ -37,7 +37,7 @@
                 <div class="row small">
                     <div class="col text-center">
                         <a class="email-text" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
+                            {{ site.data.profile.email}}
                         </a>
                     </div>
                 </div>
@@ -70,6 +70,12 @@
                         {% if site.data.profile.twitter %}
                         <a class="px-1 no-break" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
                             <i class="fab fa-twitter"></i>
+                        </a>
+                        {% endif %}
+
+                        {% if site.data.profile.bilibili %}   <!-- 假设数据字段改为 bilibili -->
+                        <a class="px-1 no-break" target="_blank" href="https://space.bilibili.com/{{ site.data.profile.bilibili }}">
+                            <i class="fab fa-bilibili"></i>   <!-- 图标类改为 fa-bilibili -->
                         </a>
                         {% endif %}
 
